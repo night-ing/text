@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+div{width:10px; height:10px; background:rgb(153,0,204);position:absolute;}
+</style>
+<script>
+function getPos(ev)
+{
+	var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
+	var scrollLeft = document.documentElement.scrollLeft||document.body.scrollLeft;
+	return {x:ev.clientX+scrollLeft,y:ev.clientY+scrollTop};
+}
+document.onmousemove=function()
+{
+	var aDiv=document.getElementsByTagName('div');
+	for(var i=aDiv.length-1; i>0;i--)
+	{
+		aDiv[i].style.left=aDiv[i-1].offsetLeft+'px';
+		aDiv[i].style.top = aDiv[i-1].offsetTop+'px';
+	}
+	aDiv[0].style.left = getPos(event).x+'px';
+	aDiv[0].style.top=getPos(event).y+'px';
+};
+</script>
+</head>
+
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>
